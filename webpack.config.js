@@ -1,3 +1,5 @@
+webpack = require('webpack')
+
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 const htmlPlugin = new HtmlWebPackPlugin({
@@ -14,6 +16,11 @@ module.exports = {
         use: {
           loader: "babel-loader"
         }
+      },
+      {
+        test: /\.less$/,
+        include: /style/,
+        loader: 'style-loader!css-loader!less-loader'
       }
     ]
   },
