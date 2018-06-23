@@ -6,13 +6,10 @@ class Header extends Component {
         super(props)
     }
 
-
- // TODO: wire up a .less pluggin to webpack
-
     render() {
         return (
             <div class="header">
-            About Me
+            {this.props.text}
             </div>
         )
     }
