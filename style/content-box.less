@@ -11,10 +11,21 @@
   font-size: 25px;
   letter-spacing: 1.5px;
   width: 38vh;
+  max-width: 75vh;
   transition: width .375s ease-in-out;
+
+  .blurb {
+    visibility: hidden;
+  }
+
+
 }
 
 .expand-right:hover {
-  width: 90%;
+  width: 75vh;
   transition: all .375s ease-in-out;
+  .blurb {
+    visibility: visible;
+    transition: all .3 ease-in-out;
+  }
 }
