@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import Blurb from './Blurb'
 import '../../style/content-box.less'
 
 class ContentBox extends Component {
@@ -9,8 +10,9 @@ class ContentBox extends Component {
     render() {
       console.log('text: ', this.props.text)
         return (
-            <div className="content-box grow">
+            <div className="content-box expand-right">
               {this.props.text}
+              {this.props.content && <Blurb content={this.props.content} />}
             </div>
         )
     }

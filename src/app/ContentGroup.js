@@ -14,7 +14,7 @@ class ContentGroup extends Component {
         <div className="content-group-wrapper">
           <img src='../static/gram-and-daddy.jpg' />
           <div className="container">
-            {args.map(arg => this.props.render(arg))}
+            {Object.keys(args).map(arg => this.props.render(arg, args[arg]))}
           </div>
         </div>
       )
