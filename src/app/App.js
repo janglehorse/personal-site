@@ -12,10 +12,9 @@ class App extends Component {
     render() {
         return(
           <div>
-            <div>Hello, World!</div>
             <ContentGroup
               render={function(text) {return <ContentBox text={text} />}}
-              args={['Yogi', 'Software Engineer', 'J. Caleb Travers']} />
+              args={['Yogi', 'Software Engineer', 'Father']} />
           </div>
         )
     }
