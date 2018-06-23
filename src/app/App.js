@@ -1,21 +1,21 @@
 import React, { Component } from "react";
-import Header from './Header'
+import ContentBox from './ContentBox'
+import ContentGroup from './ContentGroup'
 import '../../style/app.less'
 
 class App extends Component {
     constructor(props) {
         super(props)
     }
-// TODO: Rename Header component
-// TODO: Create Container for Header 
+// TODO: Rename ContentBox component
+// TODO: Create Container for ContentBox
     render() {
         return(
           <div>
             <div>Hello, World!</div>
-            <img src='../static/gram-and-daddy.jpg' />
-            <Header text={'Yogi'}/>
-            <Header text={'Software Engineer'}/>
-            <Header text={'J. Caleb Travers'}/>
+            <ContentGroup
+              render={function(text) {return <ContentBox text={text} />}}
+              args={['Yogi', 'Software Engineer', 'J. Caleb Travers']} />
           </div>
         )
     }
