@@ -14,7 +14,8 @@ class App extends Component {
           <div>
             <ContentGroup
               render={function(text) {return <ContentBox text={text} />}}
-              args={['Yogi', 'Software Engineer', 'Father']} />
+              args={['Yogi', 'Software Engineer', 'Father']}
+              />
           </div>
         )
     }

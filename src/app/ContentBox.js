@@ -9,7 +9,7 @@ class ContentBox extends Component {
     render() {
       console.log('text: ', this.props.text)
         return (
-            <div className="content-box">
+            <div className="content-box grow">
               {this.props.text}
             </div>
         )
