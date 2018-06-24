@@ -1,31 +1,48 @@
 // TODO: style boxes
 
 .content-box {
-  padding-left: 62vh;
+  padding-left: 38vh;
   display: block;
   color: black;
   height: 11vh;
   font-family: "Calibre", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding-top: 6vh;
+  // padding-top: 6vh;
   font-weight: 500;
   font-size: 25px;
   letter-spacing: 1.5px;
   width: 38vh;
-  max-width: 75vh;
-  transition: width .375s ease-in-out;
+  // max-width: 75vh;
+  transition: all .375s ease-in-out;
 
   .blurb {
-    visibility: hidden;
+    opacity: 0;
+    margin-top: 1.5vh;
+    min-width: 55vh;
+    transition: all .35s ease-in-out;
   }
+}
 
-
+.content-box-title {
+  display: block;
+  margin-top: 3vh;
+  transition: all .75s ease-in-out;
 }
 
 .expand-right:hover {
-  width: 75vh;
+  // padding-left: 48vh;
+  // padding-top: 3vh;
+  width: 55vh;
   transition: all .375s ease-in-out;
+  .content-box-title {
+    padding-left: 20vh;
+    margin-top: 1.5vh;
+    transition: all .75s ease-in-out;
+  }
   .blurb {
-    visibility: visible;
-    transition: all .3 ease-in-out;
+    opacity: 1;
+    // margin-left: 10vh;
+    // margin-right: 10vh;
+    padding-left: 8vh;
+    transition: all .75s ease-in-out;
   }
 }

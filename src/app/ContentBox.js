@@ -11,7 +11,9 @@ class ContentBox extends Component {
       console.log('text: ', this.props.text)
         return (
             <div className="content-box expand-right">
-              {this.props.text}
+              <span className="content-box-title">
+                {this.props.text}
+              </span>
               {this.props.content && <Blurb content={this.props.content} />}
             </div>
         )
