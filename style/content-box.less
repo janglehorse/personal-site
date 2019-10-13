@@ -1,33 +1,28 @@
-// TODO: style boxes
-
 .content-box {
   padding-left: 62vh;
   display: block;
   color: black;
-  // max-height: 2em;
   font-family: "Calibre", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
   padding: .5em;
   font-weight: 500;
   font-size: 25px;
   letter-spacing: 1.5px;
-  // width: 38vh;
-  transition: max-height .3s ease-in-out;
+  transition: max-height 0.3s ease-in-out, background-color 1s linear;
+}
+
+.content-box:hover {
+  background-color: transparent;
 }
 
 .content {
-  transition: max-height .5s;
+  transition: max-height .75s;
   max-height: 0;
   overflow: hidden;
   color: inherit;
   font-weight: 350;
-  font-size: 4vh;
+  font-size: .75em;
 }
 
-// .grow:hover {
-//   width: 40vw;
-//   transition: all .375s ease-in-out;
-// }
-
-.content-box:hover > .content{
-  max-height: 60vh;
+.content-box:hover > .content {
+    max-height: 60vh;
 }

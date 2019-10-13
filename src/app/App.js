@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import ContentBox from './ContentBox'
 import ContentGroup from './ContentGroup'
 import '../../style/app.less'
-import ExpandBox from "../testExpandBox/expandBox";
 
 class App extends Component {
     constructor(props) {
