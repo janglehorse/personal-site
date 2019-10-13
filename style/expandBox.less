@@ -1,0 +1,14 @@
+.expand-box {
+  color: black;
+  background-color: #ffcc5c;
+}
+
+.content {
+  transition: max-height .5s;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.expand-box:hover > .content{
+  max-height: 3em;
+}
