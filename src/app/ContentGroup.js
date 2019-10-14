@@ -12,7 +12,9 @@ class ContentGroup extends Component {
     try{
       return (
         <div className="content-group-wrapper">
-          <img src='../static/gram-and-daddy.jpg' />
+          <img 
+            className="profile-img"
+            src='../static/gram-and-daddy.jpg' />
           <div className="container">
             {args.map(arg => this.props.render(arg))}
           </div>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import ContentBox from './ContentBox'
-import ContentGroup from './ContentGroup'
-import '../../style/app.less'
+import ContentBox from './ContentBox';
+import ContentGroup from './ContentGroup';
+import '../../style/app.less';
 
 class App extends Component {
     constructor(props) {
