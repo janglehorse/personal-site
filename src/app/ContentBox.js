@@ -1,22 +1,26 @@
 import React, {Component} from 'react'
 import '../../style/content-box.less'
+import { longLoremIpsum } from '../constants';
+import { string } from 'prop-types';
 
 class ContentBox extends Component {
-    constructor(props) {
-        super(props)
-    }
 
     render() {
-      console.log('text: ', this.props.text)
+      const { title, blurb } = this.props;
         return (
             <div className="content-box">
-              {this.props.text}
+              {this.props.text || title}
               <div className="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                {blurb || longLoremIpsum}
               </div>
             </div>
         )
     }
+}
+
+ContentBox.prototypes = {
+  title: string,
+  blurb: string
 }
 
 export default ContentBox

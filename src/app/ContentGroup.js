@@ -2,21 +2,15 @@ import React, {Component} from 'react'
 import '../../style/content-group.less'
 
 class ContentGroup extends Component {
-  constructor(props) {
-    super(props)
-  }
 
   render() {
-    console.log('args: ', this.props.args)
-    const args = this.props.args
     try{
       return (
         <div className="content-group-wrapper">
-          <img 
-            className="profile-img"
-            src='../static/gram-and-daddy.jpg' />
+          <img className="profile-img"
+            src='../static/img/gram-and-daddy.jpg' />
           <div className="container">
-            {args.map(arg => this.props.render(arg))}
+            {this.props.children}
           </div>
         </div>
       )
@@ -24,7 +18,6 @@ class ContentGroup extends Component {
     catch(e) {
       console.log('error: ', e)
     }
-
   }
 }
 
