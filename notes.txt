@@ -1,0 +1,23 @@
+// TODOs: 
+
+----Styles-----
+
+1. Do not control borders of main header with "max-width"--
+    instead use contaning div for border thickness.
+
+2. Consider basing font on viewport attributes
+
+3. (Once styles are more fixed) refactor styles using vars
+
+4. (Once BASIC design is more fixed) choose a simple 4 color color pallete
+
+---Future Design Features (in order of priority) ---
+
+1. Opposite Circle object to mirror main header: Where I've been
+    Main features: 
+        a. Swipeable left to rigth for 3-4 different pictures / icons
+            i. Each picture has left-side blurb 
+
+2. Top Navbar for quick links to other apps - 
+    a. consider tidal "what I've been listening to" mini app for fun
+    b. family picture slideshow utilizing dropbox API? Pretty lame. 
