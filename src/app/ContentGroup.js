@@ -1,14 +1,18 @@
 import React, {Component} from 'react'
+import { string } from 'prop-types';
 import '../../style/content-group.less'
 
 class ContentGroup extends Component {
 
   render() {
     try{
+      const { imgLink } = this.props;
       return (
         <div className="content-group-wrapper">
-          <img className="profile-img"
-            src='../static/img/gram-and-daddy.jpg' />
+          { imgLink &&
+            <img className="profile-img"
+            src={imgLink} />
+          }
           <div className="container">
             {this.props.children}
           </div>
@@ -19,6 +23,10 @@ class ContentGroup extends Component {
       console.log('error: ', e)
     }
   }
+}
+
+ContentGroup.proptypes = {
+  imgLink: string
 }
 
 export default ContentGroup

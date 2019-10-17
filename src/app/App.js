@@ -5,12 +5,10 @@ import '../../style/app.less';
 import blurbs from '../../static/blurbs/content';
 
 class App extends Component {
-// TODO: Rename ContentBox component
-// TODO: Create Container for ContentBox
     render() {
         return(
           <div>
-            <ContentGroup>
+            <ContentGroup imgLink='../static/img/gram-and-daddy.jpg'>
             <ContentBox title={'Yogi'}
                 blurb={blurbs.yogi} />
               <ContentBox title={'Software Engineer'}
@@ -18,6 +16,10 @@ class App extends Component {
               <ContentBox title={'Father'}
                 blurb={blurbs.father} />
             </ContentGroup>
+            <div className="btm-img-container">
+                {/* <img className="btm-img"
+                src="../static/img/launchCode_laptop_logo.jpg" /> */}
+            </div>
           </div>
         )
     }
