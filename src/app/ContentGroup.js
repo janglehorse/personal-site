@@ -10,8 +10,10 @@ class ContentGroup extends Component {
       return (
         <div className="content-group-wrapper">
           { imgLink &&
+          <div className="img-container">
             <img className="profile-img"
             src={imgLink} />
+          </div>
           }
           <div className="container">
             {this.props.children}

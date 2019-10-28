@@ -17,8 +17,6 @@ class App extends Component {
                 blurb={blurbs.father} />
             </ContentGroup>
             <div className="btm-img-container">
-                {/* <img className="btm-img"
-                src="../static/img/launchCode_laptop_logo.jpg" /> */}
             </div>
           </div>
         )

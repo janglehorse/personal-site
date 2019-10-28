@@ -1,18 +1,24 @@
+@pic-width: 30vw;
 
 .content-group-wrapper {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  top: 10vh;
-  max-width: 90%;
-  padding-left: 18vh;
+  width: 127vmin;
+}
+
+.img-container {
+  position: absolute;
+}
+
+.profile-img {
+  width: @pic-width;
+  max-width: 350px;
+  border-radius: 50%;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
+  padding-left: calc(@pic-width / 5);
+  padding-top: calc(@pic-width / 5);
 
-  :nth-child(n+1) {
+  div:nth-of-type(n+1) {
     // TODO: put in constants file
     background-color: #6fcb9f;
     padding-left: 40vh;
@@ -20,14 +26,14 @@
       padding-left: 1vh;
     }
   }
-  :nth-child(n+2) {
+  div:nth-of-type(n+2) {
     background-color: #ffcc5c;
     padding-left: 40vh;
     .content {
       padding-left: 1vh;
     }
   }
-  :nth-child(n+3) {
+  div:nth-of-type(n+3) {
     background-color: #49a9a6;
     padding-left: 40vh;
     .content {
@@ -35,13 +41,4 @@
     }
   }
 
-}
-
-// extract to css for compoenent that wraps ContentGroup called TopContent (or something)
-.profile-img {
-  width: 57vmin;
-  position: absolute;
-  border-radius: 50%;
-  top: -19px;
-  left: 0px;
 }
