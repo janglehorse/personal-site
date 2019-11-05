@@ -1,7 +1,7 @@
-@pic-width: 30vw;
+// default desktop -------------------------------------------------------
 
 .content-group-wrapper {
-  width: 127vmin;
+  width: 100%;
 }
 
 .img-container {
@@ -9,37 +9,37 @@
 }
 
 .profile-img {
-  width: @pic-width;
-  max-width: 350px;
-  min-width: 225px;
+  width: 350px;
   border-radius: 50%;
 }
 
 .container {
-  padding-left: calc(@pic-width / 5);
-  padding-top: calc(@pic-width / 5);
+  div {
+    padding-left: 40vh;
+    .content {
+      padding-left: 1vh;
+    }
+  };
 
   div:nth-of-type(n+1) {
     // TODO: put in constants file
     background-color: #6fcb9f;
-    padding-left: 40vh;
-    .content {
-      padding-left: 1vh;
-    }
   }
   div:nth-of-type(n+2) {
     background-color: #ffcc5c;
-    padding-left: 40vh;
-    .content {
-      padding-left: 1vh;
-    }
   }
   div:nth-of-type(n+3) {
     background-color: #49a9a6;
-    padding-left: 40vh;
-    .content {
-      padding-left: 1vh;
-    }
   }
+}
 
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .profile-img {
+    width: 250px;
+  }
 }

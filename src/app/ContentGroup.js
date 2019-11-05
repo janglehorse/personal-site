@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { string } from 'prop-types';
+import { string, object } from 'prop-types';
 import '../../style/content-group.less'
 
 class ContentGroup extends Component {
@@ -15,7 +15,8 @@ class ContentGroup extends Component {
             src={imgLink} />
           </div>
           }
-          <div className="container">
+          <div className="container"
+            style={this.props.containerStyles}>
             {this.props.children}
           </div>
         </div>
@@ -28,7 +29,8 @@ class ContentGroup extends Component {
 }
 
 ContentGroup.proptypes = {
-  imgLink: string
+  imgLink: string,
+  containerStyles: object
 }
 
 export default ContentGroup
