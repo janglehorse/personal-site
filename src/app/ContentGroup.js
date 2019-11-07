@@ -15,8 +15,8 @@ class ContentGroup extends Component {
             src={imgLink} />
           </div>
           }
-          <div className="container"
-            style={this.props.containerStyles}>
+          <div className="child-container"
+            style={this.props.childContainerStyles}>
             {this.props.children}
           </div>
         </div>
@@ -30,7 +30,7 @@ class ContentGroup extends Component {
 
 ContentGroup.proptypes = {
   imgLink: string,
-  containerStyles: object
+  childContainerStyles: object
 }
 
 export default ContentGroup

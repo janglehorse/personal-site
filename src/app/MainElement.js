@@ -8,7 +8,7 @@ export default class MainElement extends Component {
         return (
             <React.Fragment>
                 <ContentGroup imgLink='../static/img/gram-and-daddy.jpg'
-                    containerStyles={
+                    childContainerStyles={
                         {
                             'paddingTop': '81px',
                             'paddingLeft': '55px'
