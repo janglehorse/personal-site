@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import '../../style/app.less';
-import MainElement from "./MainElement";
+import AboutMe from "./AboutMe";
 
 class App extends Component {
     render() {
         return(
           <div>
-            <MainElement/>
+            <AboutMe/>
           </div>
         )
     }

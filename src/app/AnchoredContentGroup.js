@@ -4,6 +4,13 @@ import '../../style/anchored-content-group.less'
 
 class AnchoredContentGroup extends Component {
 
+  // TODO: make imgLink required and remove turnary 
+  // TODO: remove try catch
+  // TODO: new props: 
+  // <Number> imageWidth
+  // <Array<Object>> contentArray, ex: [{title: <String>, content: <String}, ...]
+  // TODO: calculate padding based on imageWidth and pass in to ExpandBox
+
   render() {
     try{
       const { imgLink } = this.props;
