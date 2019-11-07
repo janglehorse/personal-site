@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
-import '../../style/content-box.less'
+import '../../style/expand-box.less'
 import { longLoremIpsum } from '../constants';
 import { string } from 'prop-types';
 
-class ContentBox extends Component {
+class ExpandBox extends Component {
 
     render() {
       const { title, blurb } = this.props;
@@ -18,9 +18,9 @@ class ContentBox extends Component {
     }
 }
 
-ContentBox.prototypes = {
+ExpandBox.prototypes = {
   title: string,
   blurb: string
 }
 
-export default ContentBox
+export default ExpandBox

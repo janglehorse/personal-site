@@ -1,7 +1,11 @@
 import React, { Component } from "react";
-import ContentBox from './ContentBox';
+import ExpandBox from './ExpandBox';
 import AnchoredContentGroup from './AnchoredContentGroup';
 import blurbs from '../../static/blurbs/content';
+
+// TODO: pull in styles that will need to be dynamic via media queries for overrids
+
+
 
 export default class MainElement extends Component {
     render() {
@@ -14,11 +18,11 @@ export default class MainElement extends Component {
                             'paddingLeft': '55px'
                         }
                     }>
-                <ContentBox title={'Yogi'}
+                <ExpandBox title={'Yogi'}
                     blurb={blurbs.yogi} />
-                <ContentBox title={'Software Engineer'}
+                <ExpandBox title={'Software Engineer'}
                     blurb={blurbs["software-engineer"]} />
-                <ContentBox title={'Father'}
+                <ExpandBox title={'Father'}
                     blurb={blurbs.father} />
                 </AnchoredContentGroup>
             </React.Fragment>
