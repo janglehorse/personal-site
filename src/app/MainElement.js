@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import ContentBox from './ContentBox';
-import ContentGroup from './ContentGroup';
+import AnchoredContentGroup from './AnchoredContentGroup';
 import blurbs from '../../static/blurbs/content';
 
 export default class MainElement extends Component {
     render() {
         return (
             <React.Fragment>
-                <ContentGroup imgLink='../static/img/gram-and-daddy.jpg'
+                <AnchoredContentGroup imgLink='../static/img/gram-and-daddy.jpg'
                     childContainerStyles={
                         {
                             'paddingTop': '81px',
@@ -20,7 +20,7 @@ export default class MainElement extends Component {
                     blurb={blurbs["software-engineer"]} />
                 <ContentBox title={'Father'}
                     blurb={blurbs.father} />
-                </ContentGroup>
+                </AnchoredContentGroup>
             </React.Fragment>
         )
     }

@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 import { string, object } from 'prop-types';
-import '../../style/content-group.less'
+import '../../style/anchored-content-group.less'
 
-class ContentGroup extends Component {
+class AnchoredContentGroup extends Component {
 
   render() {
     try{
@@ -28,9 +28,9 @@ class ContentGroup extends Component {
   }
 }
 
-ContentGroup.proptypes = {
+AnchoredContentGroup.proptypes = {
   imgLink: string,
   childContainerStyles: object
 }
 
-export default ContentGroup
+export default AnchoredContentGroup
