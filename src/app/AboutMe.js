@@ -18,7 +18,7 @@ export default class AboutMe extends Component {
                             'paddingTop': '81px',
                             'paddingLeft': '55px'
                         }
-                    }>
+                }>
                 <ExpandBox title={'Yogi'}
                     blurb={blurbs.yogi} />
                 <ExpandBox title={'Software Engineer'}
