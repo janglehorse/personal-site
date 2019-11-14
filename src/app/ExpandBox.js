@@ -8,7 +8,8 @@ class ExpandBox extends Component {
     render() {
       const { title, blurb } = this.props;
         return (
-            <div className="content-box">
+            <div className="content-box"
+            {...this.props}>
               {this.props.text || title}
               <div className="content">
                 {blurb || longLoremIpsum}
@@ -21,6 +22,7 @@ class ExpandBox extends Component {
 ExpandBox.prototypes = {
   title: string,
   blurb: string
+
 }
 
 export default ExpandBox
