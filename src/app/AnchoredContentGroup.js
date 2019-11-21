@@ -3,26 +3,29 @@ import { string, object, array, number } from 'prop-types';
 import '../../style/anchored-content-group.less'
 import ExpandBox from './ExpandBox';
 
+// TODO: put in const file
 const desktopImageWidth = 350;
 
+// TODO: put in const file? 
 const desktopStyles = {
   profileImg: {
     width: `${desktopImageWidth}px`
   },
-  childContainer: calculateChildStyle(desktopStyles)
+  childContainer: calculateChildStyle(desktopImageWidth)
 }
 
 const style = function() {
   return desktopStyles;
-  /* TODO: branch on window height: 
+  /* TODO: branch on window height for responsive styles: 
   if (window.innerWidth < 800) {
      return tabletStyles;
   } */
 };
 
+// TODO: put in utils file? 
 function calculateChildStyle(imageWidth) {
   return {
-    // TODO: un-hardcode this 
+    // TODO: un-hardcode this with prop? 
     'paddingLeft': `${ imageWidth - 20 }px`
   }
 }
@@ -33,18 +36,14 @@ class AnchoredContentGroup extends Component {
       const { 
         imgLink, 
         childContainerStyles, 
-        contentArray,
-        imageWidth
+        contentArray
       } = this.props;
 
-      const childStyle = this.calculateChildStyle(imageWidth);
       return (
         <div className="content-group-wrapper">
           <div className="img-container">
             <img className="profile-img"
-            style={
-                {width: `${imageWidth}px`}
-              }
+            style={style().profileImg}
             src={imgLink} />
           </div>
           <div className="child-container"
@@ -53,7 +52,7 @@ class AnchoredContentGroup extends Component {
               contentArray.map((item) => {
                 return <ExpandBox title={item.title}
                   blurb={item.blurb}
-                  style={childStyle}
+                  style={style().childContainer}
                 />
               })
             }
@@ -62,20 +61,12 @@ class AnchoredContentGroup extends Component {
       )
   }
 
-  calculateChildStyle(imageWidth) {
-    return {
-      // TODO: un-hardcode this 
-      'paddingLeft': `${ imageWidth - 20 }px`
-    }
-  }
-
 }
 
 AnchoredContentGroup.proptypes = {
   imgLink: string.isRequired,
   childContainerStyles: object,
-  contentArray: array,
-  imageWidth: number
+  contentArray: array
 }
 
 export default AnchoredContentGroup

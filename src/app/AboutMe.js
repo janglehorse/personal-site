@@ -5,7 +5,6 @@ import blurbs from '../../static/blurbs/content';
 
 // TODO: pull in styles that will need to be dynamic via media queries for overrids
 // anchoredContentGroup
-// .profile-img.width
 // expandBox.content-box.padding-left
 
 const contentArray = [
@@ -35,7 +34,6 @@ export default class AboutMe extends Component {
                 <AnchoredContentGroup imgLink='../static/img/gram-and-daddy.jpg'
                     childContainerStyles={childContainerStyles}
                     contentArray={contentArray}
-                    imageWidth={350}
             />
             </React.Fragment>
         )
