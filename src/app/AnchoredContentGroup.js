@@ -25,7 +25,7 @@ class AnchoredContentGroup extends Component {
           </div>
           <div className="child-container"
             style={childContainerStyles}>
-            {
+            { 
               contentArray.map((item) => {
                 return <ExpandBox title={item.title}
                   blurb={item.blurb}
