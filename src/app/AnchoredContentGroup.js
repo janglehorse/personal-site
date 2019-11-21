@@ -3,6 +3,30 @@ import { string, object, array, number } from 'prop-types';
 import '../../style/anchored-content-group.less'
 import ExpandBox from './ExpandBox';
 
+const desktopImageWidth = 350;
+
+const desktopStyles = {
+  profileImg: {
+    width: `${desktopImageWidth}px`
+  },
+  childContainer: calculateChildStyle(desktopStyles)
+}
+
+const style = function() {
+  return desktopStyles;
+  /* TODO: branch on window height: 
+  if (window.innerWidth < 800) {
+     return tabletStyles;
+  } */
+};
+
+function calculateChildStyle(imageWidth) {
+  return {
+    // TODO: un-hardcode this 
+    'paddingLeft': `${ imageWidth - 20 }px`
+  }
+}
+
 class AnchoredContentGroup extends Component {
 
   render() {
