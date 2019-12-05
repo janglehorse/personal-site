@@ -1,10 +1,11 @@
 .content-group-wrapper {
+  display: inline-block;
   width: 100%;
 }
 
-.img-container {
-  position: absolute;
-}
+// .img-container {
+//   position: absolute;
+// }
 
 .anchor-img {
   // width: 350px;
@@ -12,6 +13,7 @@
 }
 
 .child-container {
+  /* consider display: inline-block ? */
 
   div:nth-of-type(n+1) {
     // TODO: put in constants file
@@ -23,6 +25,10 @@
   div:nth-of-type(n+3) {
     background-color: #49a9a6;
   }
+}
+
+.child-props-container {
+  text-align: center;
 }
 
 /* 

@@ -2,13 +2,28 @@ import React, {Component} from 'react'
 import { string, object, array } from 'prop-types';
 import '../../../style/anchored-content-group.less'
 import ExpandBox from '../ExpandBox';
-import {
-  desktopStyles
-} from './constants';
+import { calculateChildStyle } from './utils';
+// import {
+//   desktopStyles
+// } from './constants';
+
+export const desktopImageWidth = 350;
+export const desktopStyles = function(props) {
+  const { align } = props;
+  return {
+    imgContainer: {
+      float: align
+    },
+    anchorImg: {
+      width: `${desktopImageWidth}px`
+    },
+    childContainer: calculateChildStyle(desktopImageWidth)
+  }
+}
 
 
-const style = function() {
-  return desktopStyles;
+const style = function(props) {
+  return desktopStyles(props);
   /* TODO: branch on window height for responsive styles: 
   if (window.innerWidth < 800) {
      return tabletStyles;
@@ -20,26 +35,33 @@ class AnchoredContentGroup extends Component {
       const { 
         imgLink, 
         childContainerStyles, 
-        contentArray
+        contentArray,
+        children
       } = this.props;
 
       return (
         <div className="content-group-wrapper">
-          <div className="img-container">
+          <div className="img-container" 
+            style={style(this.props).imgContainer}>
             <img className="anchor-img"
-            style={style().anchorImg}
+            style={style(this.props).anchorImg}
             src={imgLink} />
           </div>
-          <div className="child-container"
+          { contentArray &&
+            <div className="child-container"
             style={childContainerStyles}>
-            { 
-              contentArray.map((item) => {
+              {
+                contentArray.map((item) => {
                 return <ExpandBox title={item.title}
                   blurb={item.blurb}
-                  style={style().childContainer}
+                  style={style(this.props).childContainer}
                 />
-              })
-            }
+                })
+              }
+            </div>
+          }
+          <div className="child-props-container">
+            {children}
           </div>
         </div>
       )
@@ -47,7 +69,12 @@ class AnchoredContentGroup extends Component {
 
 }
 
+AnchoredContentGroup.defaultProps = {
+  align: 'left'
+}
+
 AnchoredContentGroup.proptypes = {
+  align: string,
   imgLink: string.isRequired,
   childContainerStyles: object,
   contentArray: array

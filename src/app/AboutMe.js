@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import AnchoredContentGroup from './anchoredContentGroup/AnchoredContentGroup';
 import blurbs from '../../static/blurbs/content';
+import ButtonSet from './ButtonSet'
 
 const contentArray = [
     {
@@ -17,9 +18,28 @@ const contentArray = [
     }
 ];
 
+const bottomContent = [
+    {
+        title: 'Music',
+        blurb: 'Been there done that'
+    },
+    {
+        title: 'LaunchCode',
+        blurb: 'Believe the hype!'
+    },
+    {   title: 'Galaxy Wars',
+        blurb: 'Fire the ion cannons!!'
+    }
+]
+
 const childContainerStyles = {
     'paddingTop': '81px',
     'paddingLeft': '30px'
+}
+
+const childContainerStylesRight = {
+    'paddingTop': '81px',
+    'paddingRight': '30px'
 }
 
 export default class AboutMe extends Component {
@@ -27,10 +47,18 @@ export default class AboutMe extends Component {
         return (
             <React.Fragment>
                 <AnchoredContentGroup imgLink='../static/img/gram-and-daddy.jpg'
+                    align={'left'}
                     childContainerStyles={childContainerStyles}
                     contentArray={contentArray}
-            />
+                />
+                <AnchoredContentGroup imgLink='../static/img/launchCodelogo.png'
+                    align={'right'}
+                    childContainerStyles={childContainerStylesRight}
+                    contentArray={bottomContent}
+                >
+                    {/* <ButtonSet/> */}
+                </AnchoredContentGroup>
             </React.Fragment>
         )
     }
-}
+} 
