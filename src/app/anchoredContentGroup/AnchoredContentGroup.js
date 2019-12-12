@@ -31,6 +31,13 @@ const style = function(props) {
 };
 class AnchoredContentGroup extends Component {
 
+  constructor(props) {
+    super(props)
+    this.state = {
+      hoverImage: ''
+    }
+  }
+
   render() {
       const { 
         imgLink, 
@@ -39,22 +46,28 @@ class AnchoredContentGroup extends Component {
         children
       } = this.props;
 
+      const { hoverImage } = this.state;
+      const currentImage = hoverImage ? hoverImage : imgLink;
+
       return (
         <div className="content-group-wrapper">
           <div className="img-container" 
             style={style(this.props).imgContainer}>
             <img className="anchor-img"
             style={style(this.props).anchorImg}
-            src={imgLink} />
+            src={currentImage} />
           </div>
           { contentArray &&
             <div className="child-container"
-            style={childContainerStyles}>
+            style={childContainerStyles}
+            >
               {
-                contentArray.map((item) => {
+                contentArray.map((item, index) => {
                 return <ExpandBox title={item.title}
                   blurb={item.blurb}
                   style={style(this.props).childContainer}
+                  onMouseEnter={() => this.setHoverImage(index)}
+                  onMouseLeave={() => this.resetHoverImage()}
                 />
                 })
               }
@@ -67,6 +80,13 @@ class AnchoredContentGroup extends Component {
       )
   }
 
+  setHoverImage(index) {
+    const { contentArray } = this.props;
+    this.setState({ hoverImage: contentArray[index].img });
+  }
+  resetHoverImage() {
+    this.setState({ hoverImage: null });
+  }
 }
 
 AnchoredContentGroup.defaultProps = {

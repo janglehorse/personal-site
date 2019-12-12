@@ -21,7 +21,8 @@ const contentArray = [
 const bottomContent = [
     {
         title: 'Music',
-        blurb: 'Been there done that'
+        blurb: 'Been there done that',
+        img: '../static/img/caleb_music.jpg'
     },
     {
         title: 'LaunchCode',
