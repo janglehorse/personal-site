@@ -1,5 +1,5 @@
 export default {
-    yogi: 'A blurb about being a yogi',
-    father: 'A blurb about being a father',
-    'software-engineer': 'A blurb about being a software engineer'
+    yogi: "Years ago, I was in need of some very concrete ways to take care of myself and be the person I knew I needed to be. In addition to my faith, my yoga practice has created an inner and outer strength I enjoy every day.",
+    father: "Having 3 boys (middle pictured here) is the true work and joy in my life. They're more than a handful for sure, but I can't imagine anything different! They keep me on my toes, and always reaching to be the compassionate person I am called to be. They are all completely awesome in their own uniquely amazing ways. ",
+    'software-engineer': "I love creating, learning and honing my craft. I started in back end web a few years back but quickly picked up front end work on the fly during my first gig. Since then I've loved the challenge that comes with working on both sides of the stack. So far I've mostly worked with React and Java microservices, but I'm excited to keep learning more!"
 }
