@@ -1,6 +1,6 @@
 {
   "name": "j-caleb-travers",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "a basic personal site built with React",
   "main": "index.js",
   "scripts": {
