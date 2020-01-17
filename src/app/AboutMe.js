@@ -28,8 +28,8 @@ const bottomContent = [
         title: 'LaunchCode',
         blurb: 'Believe the hype!'
     },
-    {   title: 'Galaxy Wars',
-        blurb: 'Fire the ion cannons!!'
+    {   title: 'More',
+        blurb: 'Stay tuned!'
     }
 ]
 
