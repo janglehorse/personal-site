@@ -21,12 +21,12 @@ const contentArray = [
 const bottomContent = [
     {
         title: 'Music',
-        blurb: 'Been there done that',
+        blurb: blurbs.music,
         img: '../static/img/caleb_music.jpg'
     },
     {
         title: 'LaunchCode',
-        blurb: 'Believe the hype!'
+        blurb: blurbs.launchCode
     },
     {   title: 'More',
         blurb: 'Stay tuned!'
