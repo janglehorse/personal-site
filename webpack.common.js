@@ -15,7 +15,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
   },
-  devtool: 'eval-source-map',
   module: {
     rules: [
       {
@@ -28,7 +27,6 @@ module.exports = {
       {
         test: /\.less$/,
         include: /style/,
-        // loader: 'style-loader!css-loader!less-loader'
         use: [
           {
             loader: 'style-loader'
@@ -50,4 +48,4 @@ module.exports = {
     ]
   },
   plugins: [htmlPlugin]
-};
+}
