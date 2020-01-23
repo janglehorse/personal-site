@@ -1,4 +1,5 @@
 webpack = require('webpack')
+path = require('path')
 
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
@@ -8,6 +9,12 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = {
+  entry: {
+    app: './src/index.js'
+  },
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+  },
   devtool: 'eval-source-map',
   module: {
     rules: [
@@ -33,6 +40,12 @@ module.exports = {
             loader: 'less-loader'
           }
         ]
+      },
+      {
+        test: /\.(jpg|png)$/,
+        use: {
+          loader: 'file-loader'
+        }
       }
     ]
   },
