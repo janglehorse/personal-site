@@ -22,7 +22,7 @@ const bottomContent = [
     {
         title: 'Music',
         blurb: blurbs.music,
-        img: '../static/img/caleb_music.jpg'
+        img: '../static/img/caleb-music.jpg'
     },
     {
         title: 'LaunchCode',
@@ -52,7 +52,7 @@ export default class AboutMe extends Component {
                     childContainerStyles={childContainerStyles}
                     contentArray={contentArray}
                 />
-                <AnchoredContentGroup imgLink='../static/img/launchCodelogo.png'
+                <AnchoredContentGroup imgLink='../static/img/launchcode-logo.png'
                     align={'right'}
                     childContainerStyles={childContainerStylesRight}
                     contentArray={bottomContent}
