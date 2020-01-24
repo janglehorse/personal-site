@@ -2,11 +2,20 @@ webpack = require('webpack')
 path = require('path')
 
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
+
 
 const htmlPlugin = new HtmlWebPackPlugin({
   template: "./src/index.html",
   filename: "./index.html"
 });
+
+const copyPluggin = new CopyPlugin([
+  {
+    from: './static/img/', 
+    to: './static/img'
+  }
+]);
 
 module.exports = {
   entry: {
@@ -47,5 +56,8 @@ module.exports = {
       }
     ]
   },
-  plugins: [htmlPlugin]
+  plugins: [
+    htmlPlugin,
+    copyPluggin
+  ]
 }
